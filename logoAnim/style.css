@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.animation {
+    background-color: grey;
+    height: 30rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* SVG */
+@keyframes play90 {
+    0% {
+        background-position: 0px 0px;
+    }
+
+    100% {
+        background-position: -13680px 0px;
+    }
+}
+
+.shapeshifter {
+    animation-duration: 1500ms;
+    animation-timing-function: steps(90);
+    width: 152px;
+    height: 160px;
+    background-repeat: no-repeat;
+}
+
+.shapeshifter.play {
+    animation-name: play90;
+}
